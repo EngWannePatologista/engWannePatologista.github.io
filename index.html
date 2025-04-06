@@ -28,7 +28,8 @@
       text-align: center;
     }
     header h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
     }
     header p {
       font-size: 1.2rem;
@@ -41,6 +42,10 @@
       margin-top: 1rem;
       font-weight: bold;
       cursor: pointer;
+      border-radius: 6px;
+    }
+    .btn:hover {
+      opacity: 0.9;
     }
     section {
       padding: 2rem;
@@ -48,11 +53,19 @@
     .sobre, .servicos, .orcamento, .contato {
       margin-bottom: 2rem;
     }
+    .sobre img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 12px;
+      margin: 1rem 0;
+    }
     .servico-card {
       background-color: white;
       padding: 1rem;
       margin: 1rem 0;
       border-left: 5px solid var(--laranja);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-radius: 4px;
     }
     form {
       background-color: var(--azul-escuro);
@@ -75,6 +88,7 @@
       border: none;
       width: 100%;
       cursor: pointer;
+      border-radius: 5px;
     }
     footer {
       background-color: var(--azul-escuro);
@@ -82,38 +96,43 @@
       text-align: center;
       padding: 1rem;
     }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Engenharia Diagnóstica e Perícias Judiciais</h1>
-    <p>Com Wanne Karine Cavalcanti | Engenheira Patologista & Perita TJPE</p>
-    <button class="btn">Solicitar Orçamento</button>
+    <p>com Wanne Karine Cavalcanti | Engenheira Patologista & Perita do TJPE</p>
+    <a href="#orcamento"><button class="btn">Solicitar Orçamento</button></a>
   </header>
 
   <section class="sobre">
     <h2>Quem é Wanne Karine?</h2>
-    <p>Sou engenheira civil, especializada em Patologia das Construções e Perita Judicial no TJPE. Atuo com diagnóstico técnico de edificações, vistorias, entregas de imóveis e muito mais. Com 29 anos, combino atualização técnica e sensibilidade no olhar para proteger seu patrimônio.</p>
+    <img src="https://via.placeholder.com/300x300.png?text=Wanne+Karine" alt="Foto da Engenheira Wanne Karine">
+    <p>Sou engenheira civil, especialista em Patologia das Construções e Perita Judicial nomeada pelo Tribunal de Justiça de Pernambuco. Atuo com diagnósticos técnicos de edificações, análises estruturais, vistorias técnicas, entregas de imóveis e consultorias personalizadas. Aos 29 anos, combino conhecimento técnico atualizado e um olhar sensível para proteger o seu patrimônio.</p>
   </section>
 
   <section class="servicos">
     <h2>Serviços Oferecidos</h2>
-    <div class="servico-card">Laudos Técnicos</div>
-    <div class="servico-card">Vistorias Cautelares</div>
+    <div class="servico-card">Laudos Técnicos de Patologia</div>
+    <div class="servico-card">Vistorias Cautelares e de Entrega</div>
     <div class="servico-card">Entrega Técnica de Apartamentos</div>
-    <div class="servico-card">Orçamentos de Manutenção</div>
-    <div class="servico-card">Fiscalização de Obras</div>
+    <div class="servico-card">Orçamentos e Planos de Manutenção</div>
+    <div class="servico-card">Fiscalização Técnica de Obras</div>
     <div class="servico-card">Perícias Judiciais (TJPE)</div>
-    <div class="servico-card">Consultoria Técnica</div>
+    <div class="servico-card">Consultoria Técnica Especializada</div>
   </section>
 
-  <section class="orcamento">
+  <section id="orcamento" class="orcamento">
     <h2>Solicite seu Orçamento</h2>
-    <form>
-      <input type="text" placeholder="Nome Completo" required>
-      <input type="email" placeholder="E-mail" required>
-      <input type="tel" placeholder="WhatsApp" required>
-      <select required>
+    <form action="https://formsubmit.co/engenheirawanne@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="nome" placeholder="Nome completo" required>
+      <input type="email" name="email" placeholder="E-mail" required>
+      <input type="tel" name="telefone" placeholder="WhatsApp" required>
+      <select name="servico" required>
         <option value="">Selecione o tipo de serviço</option>
         <option>Laudo Técnico</option>
         <option>Vistoria</option>
@@ -123,14 +142,14 @@
         <option>Perícia Judicial</option>
         <option>Consultoria</option>
       </select>
-      <textarea placeholder="Descreva seu caso brevemente" rows="5"></textarea>
+      <textarea name="mensagem" placeholder="Descreva brevemente sua necessidade" rows="5"></textarea>
       <button type="submit">Enviar Solicitação</button>
     </form>
   </section>
 
   <footer>
-    <p>📞 WhatsApp: (SEU NÚMERO AQUI)</p>
-    <p>📧 E-mail: (SEU EMAIL AQUI)</p>
+    <p>📞 WhatsApp: (81) 9XXXX-XXXX</p>
+    <p>📧 E-mail: engenheirawanne@gmail.com</p>
     <p>© 2025 Wanne Karine Cavalcanti - Engenharia Diagnóstica</p>
   </footer>
 </body>
