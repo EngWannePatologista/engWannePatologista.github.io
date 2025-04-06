@@ -4,25 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WK Engenharia Diagnóstica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fff;
+      font-family: 'Inter', sans-serif;
+      background-color: #f7f1ce;
       scroll-behavior: smooth;
     }
-    .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
+    header, footer {
+      background-color: #26333D;
+      color: #f7f1ce;
+      text-align: center;
+      padding: 2rem 1rem;
     }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
     }
-    button {
+    header p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0 1rem;
+    }
+    .btn {
       background-color: #f6b36f;
       color: #26333D;
       font-weight: bold;
@@ -32,64 +36,152 @@
       cursor: pointer;
       transition: 0.3s ease;
     }
-    button:hover {
+    .btn:hover {
       background-color: #e49b4a;
+    }
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #26333D;
+    }
+    .servicos, .depoimentos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background: white;
+      padding: 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .card i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #f6b36f;
     }
     .galeria {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
+      padding-top: 1rem;
     }
     .galeria img {
       width: 100%;
       border-radius: 12px;
     }
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: grid;
+      gap: 1rem;
+    }
+    input, textarea, select {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 1rem;
+      font-size: 1.5rem;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <img src="https://engwannepatologista.github.io/2%20LOGO%20REDONDA.png" alt="Logotipo WK Engenharia Diagnóstica" style="width: 150px; display: block; margin: 2rem auto;">
+  <header>
+    <img src="https://engwannepatologista.github.io/2%20LOGO%20REDONDA.png" alt="Logotipo WK Engenharia Diagnóstica" style="width: 120px;">
+    <h1>WK Engenharia Diagnóstica</h1>
+    <p>com Wanne Karine Cavalcanti | Engenheira Patologista & Perita do TJPE</p>
+    <a href="#orcamento" class="btn">Solicitar Orçamento</a>
+  </header>
 
-  <section class="sobre fade" style="max-width: 900px; margin: auto; padding: 2rem;">
-    <h2 style="color: #26333D; font-size: 2rem; margin-bottom: 1rem; text-align: center;">Quem é Wanne Karine?</h2>
+  <section>
+    <h2>Quem é Wanne Karine?</h2>
     <img src="https://images.unsplash.com/photo-1581090700227-1e8e90876c91?auto=format&fit=crop&w=800&q=80" alt="Engenheira Wanne Karine" style="width: 100%; max-width: 300px; display: block; margin: 1rem auto; border-radius: 12px;">
-    <p style="font-size: 1.1rem; color: #333; line-height: 1.6; text-align: justify;">
-      <strong>Wanne Karine Cavalcanti</strong> é engenheira civil especializada em <strong>Patologia das Construções</strong>, com atuação técnica precisa e ética como <strong>Perita Judicial no Tribunal de Justiça de Pernambuco (TJPE)</strong>. Com apenas 29 anos, ela se destaca pela competência, dedicação e um olhar jovem aliado a uma sólida base técnica.
-    </p>
-    <p style="font-size: 1.1rem; color: #333; line-height: 1.6; text-align: justify;">
-      Sua missão é garantir segurança, transparência e economia aos clientes por meio de diagnósticos confiáveis e soluções embasadas. Atua com inspeções prediais, vistorias técnicas, entregas de apartamentos, orçamentos de manutenção, perícias judiciais e consultorias para condomínios, construtoras, advogados, empresas e pessoas físicas.
-    </p>
-    <p style="font-size: 1.1rem; color: #333; line-height: 1.6; text-align: justify;">
-      Com uma abordagem <strong>humanizada, ética e atualizada</strong>, Wanne entrega mais que relatórios: entrega tranquilidade e confiança. Seu trabalho é fundamentado por valores como responsabilidade, clareza e comprometimento com o cliente. Se você busca um serviço técnico com excelência, ela é a escolha certa para proteger o seu patrimônio.
-    </p>
+    <p><strong>Wanne Karine Cavalcanti</strong> é engenheira civil especializada em <strong>Patologia das Construções</strong>, com atuação técnica precisa e ética como <strong>Perita Judicial no Tribunal de Justiça de Pernambuco (TJPE)</strong>. Com apenas 29 anos, ela se destaca pela competência, dedicação e um olhar jovem aliado a uma sólida base técnica.</p>
+    <p>Sua missão é garantir segurança, transparência e economia aos clientes por meio de diagnósticos confiáveis e soluções embasadas. Atua com inspeções prediais, vistorias técnicas, entregas de apartamentos, orçamentos de manutenção, perícias judiciais e consultorias para condomínios, construtoras, advogados, empresas e pessoas físicas.</p>
+    <p>Com uma abordagem <strong>humanizada, ética e atualizada</strong>, Wanne entrega mais que relatórios: entrega tranquilidade e confiança. Se você busca um serviço técnico com excelência, ela é a escolha certa para proteger o seu patrimônio.</p>
   </section>
 
-  <section class="galeria fade">
-    <img src="https://cdn.pixabay.com/photo/2016/11/29/12/54/crack-1867787_1280.jpg" alt="Trinca em alvenaria">
-    <img src="https://cdn.pixabay.com/photo/2020/03/26/20/41/moisture-4971532_1280.jpg" alt="Infiltração em parede">
-    <img src="https://cdn.pixabay.com/photo/2015/10/06/15/34/crack-975116_1280.jpg" alt="Fissura estrutural">
+  <section>
+    <h2>Principais Serviços</h2>
+    <div class="servicos">
+      <div class="card"><i class="fas fa-file-alt"></i>Laudos Técnicos</div>
+      <div class="card"><i class="fas fa-clipboard-check"></i>Vistorias Cautelares</div>
+      <div class="card"><i class="fas fa-key"></i>Entrega Técnica de Apartamentos</div>
+      <div class="card"><i class="fas fa-tools"></i>Orçamentos de Manutenção</div>
+      <div class="card"><i class="fas fa-hard-hat"></i>Fiscalização de Obras</div>
+      <div class="card"><i class="fas fa-gavel"></i>Perícias Judiciais</div>
+      <div class="card"><i class="fas fa-user-cog"></i>Consultoria Técnica</div>
+    </div>
   </section>
 
-  <footer style="text-align: center; padding: 2rem; background-color: #26333D; color: white;">
+  <section>
+    <h2>Imagens de Patologias Comuns</h2>
+    <div class="galeria">
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/12/54/crack-1867787_1280.jpg" alt="Trinca em alvenaria">
+      <img src="https://cdn.pixabay.com/photo/2020/03/26/20/41/moisture-4971532_1280.jpg" alt="Infiltração em parede">
+      <img src="https://cdn.pixabay.com/photo/2015/10/06/15/34/crack-975116_1280.jpg" alt="Fissura estrutural">
+    </div>
+  </section>
+
+  <section>
+    <h2>Depoimentos</h2>
+    <div class="depoimentos">
+      <div class="card">"Profissional incrível, extremamente atenciosa e precisa nas análises. Recomendo fortemente!"<br><strong>– João M., Recife/PE</strong></div>
+      <div class="card">"Wanne nos auxiliou na entrega técnica do nosso apartamento. Ficamos tranquilos e seguros com seu olhar técnico."<br><strong>– Carla S., Olinda/PE</strong></div>
+      <div class="card">"Excelente trabalho como perita judicial. Imparcial e muito técnica. Contribuiu muito com o processo."<br><strong>– Dr. Marcelo A., Advogado</strong></div>
+    </div>
+  </section>
+
+  <section id="orcamento">
+    <h2>Solicite seu Orçamento</h2>
+    <form>
+      <input type="text" placeholder="Nome completo" required>
+      <input type="email" placeholder="E-mail" required>
+      <input type="tel" placeholder="WhatsApp" required>
+      <select required>
+        <option value="">Selecione o tipo de serviço</option>
+        <option>Laudo Técnico</option>
+        <option>Vistoria</option>
+        <option>Entrega Técnica</option>
+        <option>Orçamento de Manutenção</option>
+        <option>Fiscalização</option>
+        <option>Perícia Judicial</option>
+        <option>Consultoria</option>
+      </select>
+      <textarea placeholder="Descreva brevemente sua necessidade" rows="5"></textarea>
+      <button type="submit">Enviar Solicitação</button>
+    </form>
+  </section>
+
+  <footer>
     <p>📞 WhatsApp: (81) 9 9902-5849</p>
     <p>📧 E-mail: wannekarineprofissional@gmail.com</p>
     <p>© 2025 Wanne Karine Cavalcanti - Engenharia Diagnóstica</p>
   </footer>
 
-  <script>
-    const fadeEls = document.querySelectorAll('.fade');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    fadeEls.forEach(el => observer.observe(el));
-  </script>
+  <a href="https://wa.me/5581999025849" class="whatsapp-btn" title="Fale comigo pelo WhatsApp"><i class="fab fa-whatsapp"></i></a>
 </body>
 </html>
 commit inicial
