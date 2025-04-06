@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanne Karine Cavalcanti | Engenharia Diagnóstica</title>
+  <style>
+    :root {
+      --azul-escuro: #26333D;
+      --creme-claro: #f7f1ce;
+      --laranja: #f6b36f;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: var(--creme-claro);
+      color: var(--azul-escuro);
+      line-height: 1.6;
+    }
+    header {
+      background-color: var(--azul-escuro);
+      color: var(--creme-claro);
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .btn {
+      background-color: var(--laranja);
+      color: var(--azul-escuro);
+      padding: 0.8rem 1.5rem;
+      border: none;
+      margin-top: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    section {
+      padding: 2rem;
+    }
+    .sobre, .servicos, .orcamento, .contato {
+      margin-bottom: 2rem;
+    }
+    .servico-card {
+      background-color: white;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-left: 5px solid var(--laranja);
+    }
+    form {
+      background-color: var(--azul-escuro);
+      color: var(--creme-claro);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+    }
+    form button {
+      background-color: var(--laranja);
+      color: var(--azul-escuro);
+      font-weight: bold;
+      padding: 1rem;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+    }
+    footer {
+      background-color: var(--azul-escuro);
+      color: var(--creme-claro);
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Engenharia Diagnóstica e Perícias Judiciais</h1>
+    <p>Com Wanne Karine Cavalcanti | Engenheira Patologista & Perita TJPE</p>
+    <button class="btn">Solicitar Orçamento</button>
+  </header>
+
+  <section class="sobre">
+    <h2>Quem é Wanne Karine?</h2>
+    <p>Sou engenheira civil, especializada em Patologia das Construções e Perita Judicial no TJPE. Atuo com diagnóstico técnico de edificações, vistorias, entregas de imóveis e muito mais. Com 29 anos, combino atualização técnica e sensibilidade no olhar para proteger seu patrimônio.</p>
+  </section>
+
+  <section class="servicos">
+    <h2>Serviços Oferecidos</h2>
+    <div class="servico-card">Laudos Técnicos</div>
+    <div class="servico-card">Vistorias Cautelares</div>
+    <div class="servico-card">Entrega Técnica de Apartamentos</div>
+    <div class="servico-card">Orçamentos de Manutenção</div>
+    <div class="servico-card">Fiscalização de Obras</div>
+    <div class="servico-card">Perícias Judiciais (TJPE)</div>
+    <div class="servico-card">Consultoria Técnica</div>
+  </section>
+
+  <section class="orcamento">
+    <h2>Solicite seu Orçamento</h2>
+    <form>
+      <input type="text" placeholder="Nome Completo" required>
+      <input type="email" placeholder="E-mail" required>
+      <input type="tel" placeholder="WhatsApp" required>
+      <select required>
+        <option value="">Selecione o tipo de serviço</option>
+        <option>Laudo Técnico</option>
+        <option>Vistoria</option>
+        <option>Entrega Técnica</option>
+        <option>Orçamento de Manutenção</option>
+        <option>Fiscalização</option>
+        <option>Perícia Judicial</option>
+        <option>Consultoria</option>
+      </select>
+      <textarea placeholder="Descreva seu caso brevemente" rows="5"></textarea>
+      <button type="submit">Enviar Solicitação</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>📞 WhatsApp: (SEU NÚMERO AQUI)</p>
+    <p>📧 E-mail: (SEU EMAIL AQUI)</p>
+    <p>© 2025 Wanne Karine Cavalcanti - Engenharia Diagnóstica</p>
+  </footer>
+</body>
+</html>
+
