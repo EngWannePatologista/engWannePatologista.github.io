@@ -27,6 +27,10 @@
       padding: 2rem;
       text-align: center;
     }
+    header img {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
     header h1 {
       font-size: 2.2rem;
       margin-bottom: 0.5rem;
@@ -43,21 +47,32 @@
       font-weight: bold;
       cursor: pointer;
       border-radius: 6px;
+      transition: background-color 0.3s ease;
     }
     .btn:hover {
-      opacity: 0.9;
+      background-color: #eaa55d;
     }
     section {
       padding: 2rem;
     }
-    .sobre, .servicos, .orcamento, .contato {
+    .sobre, .servicos, .orcamento, .contato, .depoimentos {
       margin-bottom: 2rem;
     }
-    .sobre img {
+    .sobre img.perfil {
       max-width: 300px;
       width: 100%;
       border-radius: 12px;
       margin: 1rem 0;
+    }
+    .patologia-imgs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .patologia-imgs img {
+      width: 100%;
+      border-radius: 8px;
     }
     .servico-card {
       background-color: white;
@@ -89,6 +104,18 @@
       width: 100%;
       cursor: pointer;
       border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #eaa55d;
+    }
+    .depoimentos blockquote {
+      background-color: white;
+      padding: 1rem;
+      border-left: 5px solid var(--azul-escuro);
+      margin: 1rem 0;
+      font-style: italic;
+      border-radius: 5px;
     }
     footer {
       background-color: var(--azul-escuro);
@@ -103,6 +130,7 @@
 </head>
 <body>
   <header>
+    <img src="2 LOGO REDONDA.png" alt="Logotipo WK Engenharia Diagnóstica">
     <h1>Engenharia Diagnóstica e Perícias Judiciais</h1>
     <p>com Wanne Karine Cavalcanti | Engenheira Patologista & Perita do TJPE</p>
     <a href="#orcamento"><button class="btn">Solicitar Orçamento</button></a>
@@ -110,8 +138,15 @@
 
   <section class="sobre">
     <h2>Quem é Wanne Karine?</h2>
-    <img src="https://via.placeholder.com/300x300.png?text=Wanne+Karine" alt="Foto da Engenheira Wanne Karine">
-    <p>Sou engenheira civil, especialista em Patologia das Construções e Perita Judicial nomeada pelo Tribunal de Justiça de Pernambuco. Atuo com diagnósticos técnicos de edificações, análises estruturais, vistorias técnicas, entregas de imóveis e consultorias personalizadas. Aos 29 anos, combino conhecimento técnico atualizado e um olhar sensível para proteger o seu patrimônio.</p>
+    <img class="perfil" src="https://i.imgur.com/jP1UwXn.jpg" alt="Foto da Engenheira Wanne Karine">
+    <p>Sou Wanne Karine Cavalcanti, engenheira civil especializada em Patologia das Construções com atuação como Perita Judicial no Tribunal de Justiça de Pernambuco (TJPE). Minha missão é entregar diagnósticos técnicos com clareza, responsabilidade e excelência, visando sempre à segurança das edificações e à economia dos clientes.</p>
+    <p>Trabalho com inspeções prediais, vistorias cautelares, fiscalizações, orçamentos técnicos de manutenção, laudos e pareceres para processos judiciais e administrativos. Atendo condomínios, construtoras, advogados, síndicos, empresas e proprietários que buscam soluções técnicas de forma ética, eficiente e fundamentada.</p>
+    <p>Com uma abordagem jovem, humanizada e atualizada, ofereço atendimento personalizado e focado em resultados. Confiança, técnica e comprometimento definem meu trabalho.</p>
+    <div class="patologia-imgs">
+      <img src="https://i.imgur.com/X7RlsV1.jpg" alt="Trinca em alvenaria">
+      <img src="https://i.imgur.com/RRHddtT.jpg" alt="Infiltração em laje">
+      <img src="https://i.imgur.com/6D3zyhs.jpg" alt="Eflorescência em fachada">
+    </div>
   </section>
 
   <section class="servicos">
@@ -123,6 +158,13 @@
     <div class="servico-card">Fiscalização Técnica de Obras</div>
     <div class="servico-card">Perícias Judiciais (TJPE)</div>
     <div class="servico-card">Consultoria Técnica Especializada</div>
+  </section>
+
+  <section class="depoimentos">
+    <h2>Depoimentos</h2>
+    <blockquote>"Profissional incrível, extremamente atenciosa e precisa nas análises. Recomendo fortemente!" – João M., Recife/PE</blockquote>
+    <blockquote>"Wanne nos auxiliou na entrega técnica do nosso apartamento. Ficamos tranquilos e seguros com seu olhar técnico." – Carla S., Olinda/PE</blockquote>
+    <blockquote>"Excelente trabalho como perita judicial. Imparcial e muito técnica. Contribuiu muito com o processo." – Dr. Marcelo A., Advogado</blockquote>
   </section>
 
   <section id="orcamento" class="orcamento">
@@ -148,8 +190,8 @@
   </section>
 
   <footer>
-    <p>📞 WhatsApp: (81) 9XXXX-XXXX</p>
-    <p>📧 E-mail: engenheirawanne@gmail.com</p>
+    <p>📞 WhatsApp: (81) 9 9902-5849</p>
+    <p>📧 E-mail: wannekarineprofissional@gmail.com</p>
     <p>© 2025 Wanne Karine Cavalcanti - Engenharia Diagnóstica</p>
   </footer>
 </body>
